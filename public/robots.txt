@@ -1,0 +1,5 @@
+makefile
+
+User-agent: *
+Allow: /
+Sitemap: https://nordikai.ca/sitemap.xml
