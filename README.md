@@ -12,7 +12,12 @@ Site 1‑page pour vendre des services **Sites web + SEO local propulsés par l�
 
 Le formulaire utilise **Formspree**. Remplacez l’attribut `action` dans `app/page.jsx` :
 ```html
-[<form action="https://formspree.io/f/your-endpoint" method="POST">](https://formspree.io/f/xzzjybog)
+<form action="https://formspree.io/f/xzzjybog" method="POST">
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Envoyer</button>
+</form>
+
 ```
 Créez votre endpoint gratuit ici : https://formspree.io
 
