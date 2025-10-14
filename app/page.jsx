@@ -163,7 +163,7 @@ export default function Page() {
             </div>
           </div>
           {/* Formspree example endpoint - replace with your own */}
-          <form className="card p-6 space-y-4" action="https://formspree.io/f/your-endpoint" method="POST">
+          <form className="card p-6 space-y-4" action="https://formspree.io/f/xzzjybog" method="POST">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="flex flex-col gap-1">
                 <label className="text-sm">Nom</label>
