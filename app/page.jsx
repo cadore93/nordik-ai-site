@@ -143,7 +143,9 @@ export default function Page() {
             { q: "Combien de temps pour livrer un site ?", a: "Généralement 3–5 jours ouvrables pour une page vitrine complète (texte + design)." },
             { q: "Quand verrai‑je des résultats SEO ?", a: "Les signaux locaux (clics, appels) progressent sous 2–4 semaines; le positionnement s’améliore sur 1–3 mois." },
             { q: "Proposez‑vous la maintenance ?", a: "Oui : mises à jour, posts Google, suivi des mots‑clés, rapports mensuels et tests A/B." },
-      const faqs = [
+      // Assure-toi que la ligne juste au-dessus se termine par '];'
+
+const faqs = [
   {
     q: "Qu’est-ce que le SEO (référencement) ?",
     a: "Le SEO, c’est l’optimisation de votre site et de votre fiche Google pour apparaître plus haut dans les résultats (et sur Google Maps). L’objectif : plus de visibilité locale, donc plus d’appels et de demandes de devis."
@@ -161,10 +163,11 @@ export default function Page() {
     a: "Les signaux locaux (clics, appels) peuvent bouger en 2–4 semaines; le classement sur vos mots-clés s’améliore sur 1–3 mois selon la concurrence."
   },
   {
-    q: "Que signifie ‘charte & copywriting’ dans le forfait sur-mesure ?",
-    a: "La charte, c’est votre identité visuelle (logo, couleurs, typographies). Le copywriting, ce sont les textes de vente optimisés pour convaincre et convertir."
+    q: "Proposez-vous la maintenance ?",
+    a: "Oui : mises à jour, posts Google, suivi des mots-clés et rapports mensuels selon le forfait choisi."
   }
 ];
+
 
           ].map((f, i) => (
             <div key={i} className="card p-5">
