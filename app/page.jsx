@@ -9,7 +9,7 @@ export default function Page() {
     { icon: <Sparkles className="h-5 w-5" />, title: "Automations", text: "Avis, posts, e‑mails : gagnez des heures chaque semaine." },
   ];
   const services = [
-    { title: "Site vitrine AI‑optimisé", text: "1 page claire qui convertit (sections & CTA pensés pour la vente).", price: "À partir de 399$" },
+    { title: "Site vitrine AI‑optimisé", text: "1 page claire qui convertit (sections & CTA — boutons d’action — pensés pour la vente).", price: "À partir de 399$" },
     { title: "SEO local & Google Business Profile", text: "Optimisation fiche, mots‑clés locaux, photos, posts & suivi mensuel.", price: "Forfaits dès 249$/mois" },
     { title: "Automations IA", text: "Flux pour générer des avis, publier des posts, répondre aux leads et e‑mails.", price: "Sur devis" },
   ];
@@ -20,7 +20,9 @@ export default function Page() {
   const plans = [
     { name: "Starter", price: "399$", items: ["Site vitrine 1 page", "Intégration Google Maps/Contact", "Livraison 72h"]},
     { name: "Pro", price: "899$", items: ["3 pages (Accueil, Services, À propos)", "SEO local + Google Business Profile", "Intégration prise de RDV"]},
-    { name: "Sur‑mesure", price: "Sur devis", items: ["Charte & copy premium", "Automations IA (avis, posts)", "Suivi 30 jours"]},
+    { name: "Sur-mesure", price: "Sur devis", items: [
+  "Charte (logo, couleurs, typos) & copywriting (textes de vente)", "Automations IA (avis, posts)", "Suivi 30 jours"]},
+
   ];
 
   return (
@@ -57,9 +59,9 @@ export default function Page() {
               <a href="#tarifs" className="btn">Voir les forfaits</a>
             </div>
             <div className="mt-6 flex items-center gap-6 text-sm text-slate-500">
-              <span className="flex items-center gap-2"><Phone className="h-4 w-4" /> (514) 555‑9021</span>
-              <span className="flex items-center gap-2"><Mail className="h-4 w-4" /> contact@nordikai.com</span>
-              <span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Montréal</span>
+              <span className="flex items-center gap-2"><Phone className="h-4 w-4" /> (438) 399‑1546</span>
+              <span className="flex items-center gap-2"><Mail className="h-4 w-4" /> cadore2003.com</span>
+              <span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Rive-Nord</span>
             </div>
           </div>
           <div className="aspect-video w-full rounded-2xl bg-slate-200 shadow-xl grid place-items-center">
@@ -141,6 +143,29 @@ export default function Page() {
             { q: "Combien de temps pour livrer un site ?", a: "Généralement 3–5 jours ouvrables pour une page vitrine complète (texte + design)." },
             { q: "Quand verrai‑je des résultats SEO ?", a: "Les signaux locaux (clics, appels) progressent sous 2–4 semaines; le positionnement s’améliore sur 1–3 mois." },
             { q: "Proposez‑vous la maintenance ?", a: "Oui : mises à jour, posts Google, suivi des mots‑clés, rapports mensuels et tests A/B." },
+      const faqs = [
+  {
+    q: "Qu’est-ce que le SEO (référencement) ?",
+    a: "Le SEO, c’est l’optimisation de votre site et de votre fiche Google pour apparaître plus haut dans les résultats (et sur Google Maps). L’objectif : plus de visibilité locale, donc plus d’appels et de demandes de devis."
+  },
+  {
+    q: "C’est quoi un test A/B ?",
+    a: "On compare 2 versions d’un élément (titre, bouton, section) auprès d’utilisateurs réels pour voir laquelle fait le plus cliquer ou demander un devis. On garde ensuite la version gagnante."
+  },
+  {
+    q: "Qu’est-ce qu’un CTA ?",
+    a: "CTA = “Call To Action” : un bouton ou lien d’action (ex. “Obtenir un devis”, “Appeler”). Placé au bon endroit avec le bon texte, il augmente les conversions."
+  },
+  {
+    q: "Combien de temps pour voir des résultats SEO ?",
+    a: "Les signaux locaux (clics, appels) peuvent bouger en 2–4 semaines; le classement sur vos mots-clés s’améliore sur 1–3 mois selon la concurrence."
+  },
+  {
+    q: "Que signifie ‘charte & copywriting’ dans le forfait sur-mesure ?",
+    a: "La charte, c’est votre identité visuelle (logo, couleurs, typographies). Le copywriting, ce sont les textes de vente optimisés pour convaincre et convertir."
+  }
+];
+
           ].map((f, i) => (
             <div key={i} className="card p-5">
               <h3 className="text-base font-semibold">{f.q}</h3>
