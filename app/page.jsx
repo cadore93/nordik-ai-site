@@ -76,31 +76,17 @@ const faqs = [
       </header>
 
       {/* HERO */}
-      <section className="container pt-16 pb-10 md:pt-24 md:pb-14">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <span className="badge">Sites + SEO local propulsés par l’IA</span>
-            <h1 className="mt-4 text-3xl md:text-5xl font-extrabold leading-tight">
-              Des sites web <span className="text-slate-900">AI‑optimisés</span> qui attirent des <span className="underline decoration-4 decoration-slate-900">clients locaux</span>.
-            </h1>
-            <p className="mt-4 text-slate-600 md:text-lg max-w-xl">
-              Création de sites vitrines rapides, optimisation Google Business Profile (SEO local) et automatisations IA pour convertir plus d’appels et de demandes de devis.
-            </p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="#contact" className="btn btn-primary">Parler de votre projet</a>
-              <a href="#tarifs" className="btn">Voir les forfaits</a>
-            </div>
-            <div className="mt-6 flex items-center gap-6 text-sm text-slate-500">
-              <span className="flex items-center gap-2"><Phone className="h-4 w-4" /> (438) 399‑1546</span>
-              <span className="flex items-center gap-2"><Mail className="h-4 w-4" /> cadore2003.com</span>
-              <span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Rive-Nord</span>
-            </div>
-          </div>
-          <div className="aspect-video w-full rounded-2xl bg-slate-200 shadow-xl grid place-items-center">
-            <span className="text-slate-500">Image du site en construction avec IA</span>
-          </div>
-        </div>
-      </section>
+     <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
+  <img
+    src="/hero.jpg"
+    alt="Aperçu site Nordik AI sur laptop et mobile — sites web AI-optimisés"
+    className="w-full h-full object-cover"
+    width={1600}
+    height={900}
+    loading="eager"
+    priority
+  />
+</div>
 
       {/* FEATURES */}
       <section className="container pb-8 grid md:grid-cols-3 gap-4">
