@@ -75,18 +75,21 @@ const faqs = [
         </div>
       </header>
 
-      {/* HERO */}
-     <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
-  <img
-    src="/hero.jpg"
+     import Image from "next/image";
+
+{/* HERO */}
+<div className="aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
+  <Image
+    src="/hero.png"     // ou "/hero.png" si tu gardes le PNG
     alt="Aperçu site Nordik AI sur laptop et mobile — sites web AI-optimisés"
-    className="w-full h-full object-cover"
     width={1600}
     height={900}
-    loading="eager"
     priority
+    className="w-full h-full object-cover"
+    sizes="(max-width: 768px) 100vw, 50vw"
   />
 </div>
+
 
       {/* FEATURES */}
       <section className="container pb-8 grid md:grid-cols-3 gap-4">
