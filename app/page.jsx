@@ -75,12 +75,14 @@ const faqs = [
         </div>
       </header>
 
-     import Image from "next/image";
+    
+
+import Image from "next/image";
 
 {/* HERO */}
 <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
   <Image
-    src="/hero.png"     // ou "/hero.png" si tu gardes le PNG
+    src="/hero.png"  // change en "/hero.jpg" si besoin
     alt="Aperçu site Nordik AI sur laptop et mobile — sites web AI-optimisés"
     width={1600}
     height={900}
