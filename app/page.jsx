@@ -1,6 +1,9 @@
 
 "use client";
 import { Phone, Mail, MapPin, Star, Zap, Rocket, Sparkles, Check } from "lucide-react";
+// 'use client'   // seulement si tu l’as déjà
+import Image from "next/image";
+
 
 export default function Page() {
   const features = [
@@ -75,14 +78,12 @@ const faqs = [
         </div>
       </header>
 
-    
 
-import Image from "next/image";
 
 {/* HERO */}
 <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
   <Image
-    src="/hero.png"  // change en "/hero.jpg" si besoin
+    src="/hero.png"      // tu as bien hero.png dans /public
     alt="Aperçu site Nordik AI sur laptop et mobile — sites web AI-optimisés"
     width={1600}
     height={900}
@@ -91,6 +92,7 @@ import Image from "next/image";
     sizes="(max-width: 768px) 100vw, 50vw"
   />
 </div>
+
 
 
       {/* FEATURES */}
