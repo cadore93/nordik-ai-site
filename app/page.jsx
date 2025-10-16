@@ -16,6 +16,7 @@ export default function Page() {
   const testimonials = [
     { name: "Alex P.", text: "Site livré en 72h, +38% d’appels depuis Google.", stars: 5 },
     { name: "Mélissa R.", text: "On est passés du bas de page à top 3 sur nos mots‑clés locaux.", stars: 5 },
+    { name: "Gabriel B.", text: "Super service à la clientèle et toujours livré dans les temps.", stars: 5 },
   ];
   const plans = [
     { name: "Starter", price: "399$", items: ["Site vitrine 1 page", "Intégration Google Maps/Contact", "Livraison 72h"]},
@@ -25,13 +26,34 @@ export default function Page() {
 
   ];
 // --- données FAQ (au-dessus du return) ---
+// --- FAQ (à placer AU-DESSUS du return, avec services/plans) ---
 const faqs = [
-  { q: "Qu’est-ce que le SEO (référencement) ?", a: "Le SEO, c’est l’optimisation de votre site et de votre fiche Google pour apparaître plus haut dans les résultats (et sur Google Maps). L’objectif : plus de visibilité locale, donc plus d’appels et de demandes de devis." },
-  { q: "C’est quoi un test A/B ?", a: "On compare 2 versions d’un élément (titre, bouton, section) auprès d’utilisateurs réels pour voir laquelle fait le plus cliquer ou demander un devis. On garde ensuite la version gagnante." },
-  { q: "Qu’est-ce qu’un CTA ?", a: "CTA = “Call To Action” : un bouton ou lien d’action (ex. “Obtenir un devis”, “Appeler”). Placé au bon endroit avec le bon texte, il augmente les conversions." },
-  { q: "Combien de temps pour voir des résultats SEO ?", a: "Les signaux locaux (clics, appels) peuvent bouger en 2–4 semaines ; le classement sur vos mots-clés s’améliore sur 1–3 mois selon la concurrence." },
-  { q: "Proposez-vous la maintenance ?", a: "Oui : mises à jour, posts Google, suivi des mots-clés et rapports mensuels selon le forfait choisi." }
+  {
+    q: "Combien de temps pour livrer un site ?",
+    a: "Généralement 3–5 jours ouvrables pour une page vitrine complète (texte + design)."
+  },
+  {
+    q: "Quand verrai-je des résultats SEO ?",
+    a: "Les signaux locaux (clics, appels) peuvent bouger en 2–4 semaines ; le positionnement s’améliore sur 1–3 mois selon la concurrence."
+  },
+  {
+    q: "Proposez-vous la maintenance ?",
+    a: "Oui : mises à jour, posts Google, suivi des mots-clés et rapports mensuels selon le forfait choisi."
+  },
+  {
+    q: "Qu’est-ce que le SEO (référencement) ?",
+    a: "Le SEO, c’est l’optimisation de votre site et de votre fiche Google pour apparaître plus haut dans les résultats (et sur Google Maps) afin de générer plus d’appels et de demandes de devis."
+  },
+  {
+    q: "C’est quoi un test A/B ?",
+    a: "On compare 2 versions d’un élément (titre, bouton, section) sur de vrais visiteurs pour voir laquelle convertit le mieux ; on garde la version gagnante."
+  },
+  {
+    q: "Qu’est-ce qu’un CTA ?",
+    a: "CTA = “Call To Action” : un bouton ou lien d’action (ex. “Obtenir un devis”, “Appeler”). Bien placé et bien rédigé, il augmente les conversions."
+  }
 ];
+
 
 
 
@@ -158,6 +180,7 @@ const faqs = [
     ))}
   </div>
 </section>
+
 
 
       {/* CONTACT */}
