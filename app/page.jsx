@@ -24,29 +24,15 @@ export default function Page() {
   "Charte (logo, couleurs, typos) & copywriting (textes de vente)", "Automations IA (avis, posts)", "Suivi 30 jours"]},
 
   ];
-  // --- données FAQ (à placer au-dessus du return, avec services/plans) ---
+// --- données FAQ (au-dessus du return) ---
 const faqs = [
-  {
-    q: "Qu’est-ce que le SEO (référencement) ?",
-    a: "Le SEO, c’est l’optimisation de votre site et de votre fiche Google pour apparaître plus haut dans les résultats (et sur Google Maps). L’objectif : plus de visibilité locale, donc plus d’appels et de demandes de devis."
-  },
-  {
-    q: "C’est quoi un test A/B ?",
-    a: "On compare 2 versions d’un élément (titre, bouton, section) auprès d’utilisateurs réels pour voir laquelle fait le plus cliquer ou demander un devis. On garde ensuite la version gagnante."
-  },
-  {
-    q: "Qu’est-ce qu’un CTA ?",
-    a: "CTA = “Call To Action” : un bouton ou lien d’action (ex. “Obtenir un devis”, “Appeler”). Placé au bon endroit avec le bon texte, il augmente les conversions."
-  },
-  {
-    q: "Combien de temps pour voir des résultats SEO ?",
-    a: "Les signaux locaux (clics, appels) peuvent bouger en 2–4 semaines ; le classement sur vos mots-clés s’améliore sur 1–3 mois selon la concurrence."
-  },
-  {
-    q: "Proposez-vous la maintenance ?",
-    a: "Oui : mises à jour, posts Google, suivi des mots-clés et rapports mensuels selon le forfait choisi."
-  }
+  { q: "Qu’est-ce que le SEO (référencement) ?", a: "Le SEO, c’est l’optimisation de votre site et de votre fiche Google pour apparaître plus haut dans les résultats (et sur Google Maps). L’objectif : plus de visibilité locale, donc plus d’appels et de demandes de devis." },
+  { q: "C’est quoi un test A/B ?", a: "On compare 2 versions d’un élément (titre, bouton, section) auprès d’utilisateurs réels pour voir laquelle fait le plus cliquer ou demander un devis. On garde ensuite la version gagnante." },
+  { q: "Qu’est-ce qu’un CTA ?", a: "CTA = “Call To Action” : un bouton ou lien d’action (ex. “Obtenir un devis”, “Appeler”). Placé au bon endroit avec le bon texte, il augmente les conversions." },
+  { q: "Combien de temps pour voir des résultats SEO ?", a: "Les signaux locaux (clics, appels) peuvent bouger en 2–4 semaines ; le classement sur vos mots-clés s’améliore sur 1–3 mois selon la concurrence." },
+  { q: "Proposez-vous la maintenance ?", a: "Oui : mises à jour, posts Google, suivi des mots-clés et rapports mensuels selon le forfait choisi." }
 ];
+
 
 
   return (
@@ -159,8 +145,7 @@ const faqs = [
         </div>
       </section>
 
-      {/* FAQ */}
-    {/* FAQ */}
+{/* FAQ */}
 <section id="faq" className="container py-10">
   <h2 className="text-2xl md:text-3xl font-bold">FAQ</h2>
 
@@ -174,19 +159,6 @@ const faqs = [
   </div>
 </section>
 
-            { q: "Combien de temps pour livrer un site ?", a: "Généralement 3–5 jours ouvrables pour une page vitrine complète (texte + design)." },
-            { q: "Quand verrai‑je des résultats SEO ?", a: "Les signaux locaux (clics, appels) progressent sous 2–4 semaines; le positionnement s’améliore sur 1–3 mois." },
-            { q: "Proposez‑vous la maintenance ?", a: "Oui : mises à jour, posts Google, suivi des mots‑clés, rapports mensuels et tests A/B." },
-      // Assure-toi que la ligne juste au-dessus se termine par '];'
-
-          ].map((f, i) => (
-            <div key={i} className="card p-5">
-              <h3 className="text-base font-semibold">{f.q}</h3>
-              <p className="text-slate-600 mt-1">{f.a}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* CONTACT */}
       <section id="contact" className="container py-12">
