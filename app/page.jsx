@@ -142,43 +142,70 @@ const faqs = [
       </section>
 
       {/* TARIFS */}
-      <section id="tarifs" className="container py-10">
-        <h2 className="text-2xl md:text-3xl font-bold">Tarifs</h2>
-        <div className="grid md:grid-cols-3 gap-4 mt-6">
-          {plans.map((p, i) => (
-            <div key={i} className="card p-5">
-              <div className="flex items-center justify-between">
-                <span className="font-semibold">{p.name}</span>
-                <span className="text-xl font-extrabold">{p.price}</span>
-              </div>
-              <ul className="space-y-2 text-slate-700 mt-4">
-                {p.items.map((it, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm"><Check className="h-4 w-4" /> {it}</li>
-                ))}
-              </ul>
-              <div className="mt-4"><a className="btn btn-primary w-full text-center" href="#contact">Choisir</a></div>
-            </div>
-          ))}
-        </div>
-      </section>
+<section id="tarifs" className="container mx-auto px-6 py-20 text-center">
+  <h2 className="text-3xl font-semibold md:text-4xl">Nos forfaits</h2>
 
-      {/* AVIS */}
-      <section className="container py-10">
-        <h2 className="text-2xl md:text-3xl font-bold">Avis clients</h2>
-        <div className="grid md:grid-cols-2 gap-4 mt-6">
-          {testimonials.map((t, i) => (
-            <div key={i} className="card p-5">
-              <div className="flex items-center gap-2 mb-2">
-                {Array.from({ length: t.stars }).map((_, s) => (
-                  <Star key={s} className="h-4 w-4 fill-current" />
-                ))}
-              </div>
-              <p className="text-slate-700">“{t.text}”</p>
-              <p className="mt-2 text-sm text-slate-500">— {t.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+  <p className="mt-3 inline-block rounded-full border border-amber-300 bg-amber-50 px-4 py-1 text-sm text-amber-700">
+    💥 Offre de lancement — 3 premières entreprises locales seulement.
+  </p>
+
+  <div className="mt-10 grid gap-8 md:grid-cols-3">
+    {/* Starter */}
+    <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
+      <h3 className="text-xl font-semibold">Starter</h3>
+      <p className="mt-2 text-4xl font-bold">$149<span className="text-lg font-normal"> CAD</span></p>
+      <ul className="mt-4 space-y-2 text-sm text-neutral-600">
+        <li>• Landing page 1 page rapide</li>
+        <li>• Optimisation Google Business Profile</li>
+        <li>• Base SEO local + formulaire + analytics</li>
+        <li>• Livraison : 3 à 5 jours</li>
+      </ul>
+      <a
+        href="#contact"
+        className="mt-6 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white"
+      >
+        Demander un audit gratuit
+      </a>
+    </div>
+
+    {/* Pro */}
+    <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
+      <h3 className="text-xl font-semibold">Pro</h3>
+      <p className="mt-2 text-4xl font-bold">$299<span className="text-lg font-normal"> CAD</span></p>
+      <ul className="mt-4 space-y-2 text-sm text-neutral-600">
+        <li>• Site 3 pages (Accueil / Services / Contact)</li>
+        <li>• SEO local complet</li>
+        <li>• 3 posts Google Business + tracking conversions</li>
+        <li>• Livraison : 7 à 10 jours</li>
+      </ul>
+      <a
+        href="#contact"
+        className="mt-6 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white"
+      >
+        Demander un audit gratuit
+      </a>
+    </div>
+
+    {/* Sur-mesure */}
+    <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
+      <h3 className="text-xl font-semibold">Sur-mesure</h3>
+      <p className="mt-2 text-4xl font-bold">$599+<span className="text-lg font-normal"> CAD</span></p>
+      <ul className="mt-4 space-y-2 text-sm text-neutral-600">
+        <li>• Identité visuelle (palette, typo)</li>
+        <li>• Textes optimisés + blog</li>
+        <li>• Automatisations IA (formulaire → email)</li>
+        <li>• Livraison : selon projet</li>
+      </ul>
+      <a
+        href="#contact"
+        className="mt-6 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white"
+      >
+        Demander un audit gratuit
+      </a>
+    </div>
+  </div>
+</section>
+
 
 {/* FAQ */}
 <section id="faq" className="container py-10">
