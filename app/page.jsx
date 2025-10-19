@@ -108,6 +108,10 @@ const faqs = [
       Demander un audit gratuit
     </a>
   </div>
+  <div className="mt-2 text-sm text-neutral-500">
+  Audit SEO local gratuit (10 min) + 3 actions concrètes.
+</div>
+
 </section>
 
 
