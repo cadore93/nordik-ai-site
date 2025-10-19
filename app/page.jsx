@@ -92,6 +92,23 @@ const faqs = [
   />
 </div>
 
+{/* PROMESSE PRINCIPALE */}
+<section className="container mx-auto max-w-4xl px-6 py-12 text-center">
+  <h1 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+    + d’appels en 30 jours grâce à un site rapide et optimisé localement.
+  </h1>
+  <p className="mt-4 text-lg text-neutral-600 md:text-xl">
+    Nordikai aide les entreprises locales à se démarquer sur Google Maps et attirer plus d’appels.
+  </p>
+  <div className="mt-8 flex justify-center">
+    <a
+      href="#contact"
+      className="rounded-xl border border-neutral-900 px-6 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white md:text-base"
+    >
+      Demander un audit gratuit
+    </a>
+  </div>
+</section>
 
 
       {/* FEATURES */}
