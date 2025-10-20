@@ -27,8 +27,7 @@ export default function Page() {
   "Charte (logo, couleurs, typos) & copywriting (textes de vente)", "Automations IA (avis, posts)", "Suivi 30 jours"]},
 
   ];
-// --- données FAQ (au-dessus du return) ---
-// --- FAQ (à placer AU-DESSUS du return, avec services/plans) ---
+
 const faqs = [
   {
     q: "Combien de temps pour livrer un site ?",
@@ -146,7 +145,7 @@ const faqs = [
   <h2 className="text-3xl font-semibold md:text-4xl">Nos forfaits</h2>
 
   <p className="mt-3 inline-block rounded-full border border-amber-300 bg-amber-50 px-4 py-1 text-sm text-amber-700">
-  💥 Offre de lancement — 3 premières entreprises locales seulement.
+  💥 Offre de lancement 50% — 3 premières entreprises locales seulement.
 </p>
 <h3 className="text-xl font-semibold">Starter</h3>
 <p className="mt-2 text-4xl font-bold">
