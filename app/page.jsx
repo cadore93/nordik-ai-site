@@ -199,6 +199,85 @@ const faqs = [
   Prix de lancement limités. Taxes en sus. Offre valable pour 3 entreprises locales.
 </p>
 
+  {/* PORTFOLIO */}
+<section id="portfolio" className="container mx-auto px-6 py-20 text-center">
+  <h2 className="text-3xl font-semibold md:text-4xl">Portfolio / Démos</h2>
+  <p className="mt-2 text-sm text-neutral-500">
+    Maquettes d’exemple — démonstration de site optimisé localement.
+  </p>
+
+  <div className="mt-10 grid gap-8 md:grid-cols-3">
+    {/* Carte 1 */}
+    <div className="rounded-2xl border border-neutral-200 p-6 shadow-sm transition hover:shadow-md">
+      <div className="aspect-video w-full overflow-hidden rounded-xl bg-neutral-100">
+        {/* Place /public/demo-electricien.jpg */}
+        <img
+          src="/demo-electricien.jpg"
+          alt="Maquette Électricien Laval — site vitrine rapide"
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <h3 className="mt-4 text-lg font-semibold">Électricien — Laval</h3>
+      <p className="mt-1 text-sm text-neutral-600">
+        Landing 1 page rapide + CTA “Appeler”, Google Map, SEO local de base.
+      </p>
+      <a
+        href="#contact"
+        className="mt-4 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white"
+      >
+        Demander un audit gratuit
+      </a>
+    </div>
+
+    {/* Carte 2 */}
+    <div className="rounded-2xl border border-neutral-200 p-6 shadow-sm transition hover:shadow-md">
+      <div className="aspect-video w-full overflow-hidden rounded-xl bg-neutral-100">
+        {/* Place /public/demo-coiffeur.jpg */}
+        <img
+          src="/demo-coiffeur.jpg"
+          alt="Maquette Salon de coiffure — Blainville"
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <h3 className="mt-4 text-lg font-semibold">Coiffeur — Blainville</h3>
+      <p className="mt-1 text-sm text-neutral-600">
+        3 pages (Accueil/Services/Contact) + prise de rendez-vous + posts GMB.
+      </p>
+      <a
+        href="#contact"
+        className="mt-4 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white"
+      >
+        Demander un audit gratuit
+      </a>
+    </div>
+
+    {/* Carte 3 */}
+    <div className="rounded-2xl border border-neutral-200 p-6 shadow-sm transition hover:shadow-md">
+      <div className="aspect-video w-full overflow-hidden rounded-xl bg-neutral-100">
+        {/* Place /public/demo-restaurant.jpg */}
+        <img
+          src="/demo-restaurant.jpg"
+          alt="Maquette Restaurant local — Montréal"
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <h3 className="mt-4 text-lg font-semibold">Restaurant — Montréal</h3>
+      <p className="mt-1 text-sm text-neutral-600">
+        Menu simple, avis, boutons “Appeler / Itinéraire”, tracking des conversions.
+      </p>
+      <a
+        href="#contact"
+        className="mt-4 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white"
+      >
+        Demander un audit gratuit
+      </a>
+    </div>
+  </div>
+</section>
+
 
     {/* Pro */}
     <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
