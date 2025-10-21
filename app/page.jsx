@@ -238,6 +238,7 @@ const faqs = [
   </div>
 </section>
 
+    
 {/* PORTFOLIO (sans images) */}
 <section id="portfolio" className="container mx-auto px-6 py-20 text-center">
   <h2 className="text-3xl font-semibold md:text-4xl">Portfolio / Démos</h2>
