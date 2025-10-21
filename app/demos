@@ -1,0 +1,46 @@
+export default function DemoElectricien() {
+  const Item = ({title, text}) => (
+    <div className="rounded-xl border border-neutral-200 p-5">
+      <h3 className="font-semibold">{title}</h3>
+      <p className="mt-1 text-sm text-neutral-600">{text}</p>
+    </div>
+  );
+
+  return (
+    <main className="container mx-auto px-6 py-12">
+      <div className="aspect-[16/6] w-full rounded-2xl bg-gradient-to-r from-slate-900 to-blue-700 text-white grid place-items-center">
+        <div className="text-center px-6">
+          <div className="text-6xl">⚡</div>
+          <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
+            Électricien — Laval : site vitrine rapide + SEO local
+          </h1>
+          <p className="mt-2 text-neutral-200">
+            + d’appels en 30 jours grâce à un site clair, rapide et optimisé Google.
+          </p>
+          <a href="/#contact" className="mt-6 inline-block rounded-xl bg-white/10 px-5 py-3 text-sm backdrop-blur border border-white/30 hover:bg-white hover:text-slate-900 transition">
+            Demander un audit gratuit
+          </a>
+        </div>
+      </div>
+
+      <section className="mt-10 grid gap-6 md:grid-cols-3">
+        <Item title="CTA visibles" text="Boutons ‘Appeler’ et ‘Demander un devis’ placés en haut + sticky sur mobile." />
+        <Item title="Google Business" text="Optimisation de la fiche + NAP cohérent + intégration Google Map." />
+        <Item title="SEO local" text="Titres/méta ‘électricien Laval’, schéma LocalBusiness, pages rapides." />
+      </section>
+
+      <section className="mt-10 rounded-2xl border border-neutral-200 p-6">
+        <h2 className="text-xl font-semibold">Ce que vous obtenez</h2>
+        <ul className="mt-3 list-disc pl-5 text-sm text-neutral-700 space-y-1">
+          <li>Maquette moderne responsive</li>
+          <li>Formulaire relié à votre e-mail</li>
+          <li>Suivi des conversions (GA4)</li>
+          <li>Déploiement Vercel</li>
+        </ul>
+        <a href="/#tarifs" className="mt-6 inline-block rounded-xl border border-neutral-900 px-5 py-3 text-sm hover:bg-neutral-900 hover:text-white transition">
+          Voir les forfaits
+        </a>
+      </section>
+    </main>
+  );
+}
