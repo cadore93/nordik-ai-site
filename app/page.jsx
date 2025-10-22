@@ -249,6 +249,7 @@ const faqs = [
     </a>
   </div>
 </section>
+
   
   
 {/* FAQ */}
