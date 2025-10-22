@@ -2,6 +2,7 @@
 "use client";
 import { Phone, Mail, MapPin, Star, Zap, Rocket, Sparkles, Check } from "lucide-react";
 import NextImage from "next/image";
+import Portfolio from "./components/Portfolio";
 
 
 export default function Page() {
@@ -200,6 +201,12 @@ const faqs = [
 </p>
 
 
+<Portfolio />
+  
+
+
+
+  
     {/* Pro */}
     <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
       <h3 className="text-xl font-semibold">Pro</h3>
