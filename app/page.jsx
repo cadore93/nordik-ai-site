@@ -244,7 +244,7 @@ const faqs = [
   <h2 className="text-3xl font-semibold">Portfolio / Démos</h2>
 
   <div className="mt-6 grid gap-6">
-    <a href="/app/demos/electricien" className="block rounded-xl border p-4 hover:shadow">
+    <a href="/demos/electricien" className="block rounded-xl border p-4 hover:shadow">
       Démo Électricien
     </a>
   </div>
