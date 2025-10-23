@@ -19,7 +19,7 @@ export default function Page() {
   const testimonials = [
     { name: "Alex P.", text: "Site livré en 72h, +38% d’appels depuis Google.", stars: 5 },
     { name: "Mélissa R.", text: "On est passés du bas de page à top 3 sur nos mots‑clés locaux.", stars: 5 },
-    { name: "Gabriel B.", text: "Super service à la clientèle et toujours livré dans les temps.", stars: 5 },
+    { name: "Gabriel B.", text: "Super service à la clientèle et toujours livré dans les temps ptit neg.", stars: 5 },
   ];
   const plans = [
     { name: "Starter", price: "149$", items: ["Site vitrine 1 page", "Intégration Google Maps/Contact", "Livraison 72h"]},
