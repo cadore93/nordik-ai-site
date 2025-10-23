@@ -2,7 +2,7 @@
 "use client";
 import { Phone, Mail, MapPin, Star, Zap, Rocket, Sparkles, Check } from "lucide-react";
 import NextImage from "next/image";
-import Portfolio from "./components/Portfolio.jsx";
+import Portfolio from "./components/Portfolio";
 
 
 export default function Page() {
