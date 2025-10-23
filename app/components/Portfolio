@@ -15,7 +15,7 @@ export default function Portfolio() {
         <a href="/demos/electricien" className="rounded-2xl border p-6 hover:shadow transition">
           <div className="relative aspect-video overflow-hidden rounded-xl">
             <Image
-              src="/portfolio/electricien-site.jpg"
+              src="/portfolio/electricien-site-demo.jpg"
               alt="Démo site Électricien"
               fill
               className="object-cover"
@@ -27,7 +27,7 @@ export default function Portfolio() {
         <a href="/demos/coiffeur" className="rounded-2xl border p-6 hover:shadow transition">
           <div className="relative aspect-video overflow-hidden rounded-xl">
             <Image
-              src="/portfolio/coiffeur-site.jpg"
+              src="/portfolio/coiffeur-site-demo.jpg"
               alt="Démo site Coiffeuse"
               fill
               className="object-cover"
@@ -39,7 +39,7 @@ export default function Portfolio() {
         <a href="/demos/restaurant" className="rounded-2xl border p-6 hover:shadow transition">
           <div className="relative aspect-video overflow-hidden rounded-xl">
             <Image
-              src="/portfolio/restaurant-site.jpg"
+              src="/portfolio/restaurant-site-demo.jpg"
               alt="Démo site Restaurant"
               fill
               className="object-cover"
