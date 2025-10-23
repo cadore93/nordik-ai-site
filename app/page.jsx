@@ -203,6 +203,7 @@ const faqs = [
 
 <Portfolio />
   
+<section id="portfolio" className="container mx-auto px-6 py-20 text-center border border-dashed">
 
 
 
