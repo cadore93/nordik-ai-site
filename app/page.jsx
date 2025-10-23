@@ -200,13 +200,6 @@ const faqs = [
   Prix de lancement limités. Taxes en sus. Offre valable pour 3 entreprises locales.
 </p>
 
-
-<Portfolio />
-  
-<section id="portfolio" className="container mx-auto px-6 py-20 text-center border border-dashed">
-
-
-
   
     {/* Pro */}
     <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
@@ -247,6 +240,9 @@ const faqs = [
 </section>
 
   
+<Portfolio />
+  
+<section id="portfolio" className="container mx-auto px-6 py-20 text-center border border-dashed">
 
   
   
