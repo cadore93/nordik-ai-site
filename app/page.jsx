@@ -244,11 +244,27 @@ const faqs = [
   
 <section id="portfolio" className="container mx-auto px-6 py-20 text-center border border-dashed">
 
-  {/* AVIS (test) */}
-<section id="avis" className="container mx-auto px-6 py-16 border border-dashed">
-  <h2 className="text-2xl font-bold">Avis (test)</h2>
-  <p className="text-sm text-neutral-600 mt-2">Si tu vois ce bloc, la section fonctionne.</p>
+ {/* AVIS */}
+<section id="avis" className="container mx-auto px-6 py-16">
+  <h2 className="text-2xl md:text-3xl font-bold">Avis clients</h2>
+
+  <div className="mt-8 grid gap-6 md:grid-cols-3">
+    {testimonials.map((t, i) => (
+      <div key={i} className="rounded-xl border border-neutral-200 p-5">
+        <div className="flex items-center gap-2 mb-2">
+          {Array.from({ length: t.stars }).map((_, s) => (
+            <svg key={s} className="h-4 w-4 fill-current text-yellow-500" viewBox="0 0 20 20">
+              <path d="M10 15l-5.878 3.09L5.82 12.18.94 7.91l6.09-.89L10 1l2.97 6.02 6.09.89-4.88 4.27 1.7 5.91z" />
+            </svg>
+          ))}
+        </div>
+        <p className="text-neutral-700">{t.text}</p>
+        <p className="mt-2 text-sm text-neutral-500">— {t.name}</p>
+      </div>
+    ))}
+  </div>
 </section>
+
 
   
 {/* FAQ */}
