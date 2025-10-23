@@ -244,7 +244,12 @@ const faqs = [
   
 <section id="portfolio" className="container mx-auto px-6 py-20 text-center border border-dashed">
 
-  
+  {/* AVIS (test) */}
+<section id="avis" className="container mx-auto px-6 py-16 border border-dashed">
+  <h2 className="text-2xl font-bold">Avis (test)</h2>
+  <p className="text-sm text-neutral-600 mt-2">Si tu vois ce bloc, la section fonctionne.</p>
+</section>
+
   
 {/* FAQ */}
 <section id="faq" className="container py-10">
