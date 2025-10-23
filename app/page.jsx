@@ -141,70 +141,46 @@ const faqs = [
         </div>
       </section>
 
-      {/* TARIFS */}
+     {/* TARIFS */}
 <section id="tarifs" className="container mx-auto px-6 py-20 text-center">
   <h2 className="text-3xl font-semibold md:text-4xl">Nos forfaits</h2>
 
   <p className="mt-3 inline-block rounded-full border border-amber-300 bg-amber-50 px-4 py-1 text-sm text-amber-700">
-  💥 Offre de lancement 50% — 3 premières entreprises locales seulement.
-</p>
-<h3 className="text-xl font-semibold">Starter</h3>
-<p className="mt-2 text-4xl font-bold">
-  $149<span className="text-lg font-normal"> CAD</span>
-</p>
-<ul className="mt-4 space-y-2 text-sm text-neutral-600">
-  <li>• Landing page 1 page rapide</li>
-  <li>• Optimisation Google Business Profile</li>
-  <li>• Base SEO local + formulaire + analytics</li>
-  <li>• Livraison : 3 à 5 jours</li>
-</ul>
-<a href="#contact"
-   className="mt-6 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white">
-  Demander un audit gratuit
-</a>
-<div className="relative">
-  <span className="absolute right-0 -top-2 rounded-full bg-neutral-900 px-2 py-1 text-xs font-medium text-white">
-    Populaire 💡
-  </span>
-</div>
+    💥 Offre de lancement 50% — 3 premières entreprises locales seulement.
+  </p>
 
-<h3 className="text-xl font-semibold">Pro</h3>
-<p className="mt-2 text-4xl font-bold">
-  $299<span className="text-lg font-normal"> CAD</span>
-</p>
-<ul className="mt-4 space-y-2 text-sm text-neutral-600">
-  <li>• Site 3 pages (Accueil / Services / Contact)</li>
-  <li>• SEO local complet</li>
-  <li>• 3 posts Google Business + tracking conversions</li>
-  <li>• Livraison : 7 à 10 jours</li>
-</ul>
-<a href="#contact"
-   className="mt-6 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white">
-  Demander un audit gratuit
-</a>
-<h3 className="text-xl font-semibold">Sur-mesure</h3>
-<p className="mt-2 text-4xl font-bold">
-  $599+<span className="text-lg font-normal"> CAD</span>
-</p>
-<ul className="mt-4 space-y-2 text-sm text-neutral-600">
-  <li>• Identité visuelle (palette, typo)</li>
-  <li>• Textes optimisés + blog</li>
-  <li>• Automatisations IA (formulaire → email)</li>
-  <li>• Livraison : selon projet</li>
-</ul>
-<a href="#contact"
-   className="mt-6 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white">
-  Demander un audit gratuit
-</a>
-<p className="mt-6 text-xs text-neutral-500">
-  Prix de lancement limités. Taxes en sus. Offre valable pour 3 entreprises locales.
-</p>
+  <div className="mt-8 grid gap-6 md:grid-cols-3">
+    {/* Starter */}
+    <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
+      <h3 className="text-xl font-semibold">Starter</h3>
+      <p className="mt-2 text-4xl font-bold">
+        $149<span className="text-lg font-normal"> CAD</span>
+      </p>
+      <ul className="mt-4 space-y-2 text-sm text-neutral-600">
+        <li>• Landing page 1 page rapide</li>
+        <li>• Optimisation Google Business Profile</li>
+        <li>• Base SEO local + formulaire + analytics</li>
+        <li>• Livraison : 3 à 5 jours</li>
+      </ul>
+      <a
+        href="#contact"
+        className="mt-6 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white"
+      >
+        Demander un audit gratuit
+      </a>
+    </div>
 
-  
     {/* Pro */}
     <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
+      <div className="relative">
+        <span className="absolute right-0 -top-2 rounded-full bg-neutral-900 px-2 py-1 text-xs font-medium text-white">
+          Populaire 💡
+        </span>
+      </div>
       <h3 className="text-xl font-semibold">Pro</h3>
-      <p className="mt-2 text-4xl font-bold">$299<span className="text-lg font-normal"> CAD</span></p>
+      <p className="mt-2 text-4xl font-bold">
+        $299<span className="text-lg font-normal"> CAD</span>
+      </p>
       <ul className="mt-4 space-y-2 text-sm text-neutral-600">
         <li>• Site 3 pages (Accueil / Services / Contact)</li>
         <li>• SEO local complet</li>
@@ -222,7 +198,9 @@ const faqs = [
     {/* Sur-mesure */}
     <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
       <h3 className="text-xl font-semibold">Sur-mesure</h3>
-      <p className="mt-2 text-4xl font-bold">$599+<span className="text-lg font-normal"> CAD</span></p>
+      <p className="mt-2 text-4xl font-bold">
+        $599+<span className="text-lg font-normal"> CAD</span>
+      </p>
       <ul className="mt-4 space-y-2 text-sm text-neutral-600">
         <li>• Identité visuelle (palette, typo)</li>
         <li>• Textes optimisés + blog</li>
@@ -237,7 +215,12 @@ const faqs = [
       </a>
     </div>
   </div>
+
+  <p className="mt-6 text-xs text-neutral-500">
+    Prix de lancement limités. Taxes en sus. Offre valable pour 3 entreprises locales.
+  </p>
 </section>
+
 
   
 <Portfolio />
