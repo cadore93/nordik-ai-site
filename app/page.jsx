@@ -2,7 +2,7 @@
 "use client";
 import { Phone, Mail, MapPin, Star, Zap, Rocket, Sparkles, Check } from "lucide-react";
 import NextImage from "next/image";
-import Portfolio from "./components/Portfolio";
+import Portfolio from "./components/Portfolio.jsx";
 
 
 export default function Page() {
@@ -242,7 +242,6 @@ const faqs = [
   
 <Portfolio />
   
-<section id="portfolio" className="container mx-auto px-6 py-20 text-center border border-dashed">
 
  {/* AVIS */}
 <section id="avis" className="container mx-auto px-6 py-16">
