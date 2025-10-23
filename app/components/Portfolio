@@ -1,27 +1,51 @@
 
+import Image from "next/image";
+
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="container mx-auto px-6 py-20 text-center">
-      <h2 className="text-3xl font-semibold md:text-4xl">Portfolio / Démos</h2>
-      <p className="mt-2 text-sm text-neutral-500">Maquettes d’exemple — sans images.</p>
+    <section id="portfolio" className="container mx-auto px-6 py-20">
+      <div className="text-center">
+        <h2 className="text-3xl font-semibold md:text-4xl">Portfolio / Démos</h2>
+        <p className="mt-2 text-sm text-neutral-500">
+          Aperçus réalistes des sites démo Nordik AI (captures de maquettes).
+        </p>
+      </div>
 
       <div className="mt-10 grid gap-8 md:grid-cols-3">
-        <a href="/demos/electricien" className="rounded-2xl border p-6 text-left hover:shadow">
-          <div className="aspect-video rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 grid place-items-center text-6xl">⚡</div>
+        <a href="/demos/electricien" className="rounded-2xl border p-6 hover:shadow transition">
+          <div className="relative aspect-video overflow-hidden rounded-xl">
+            <Image
+              src="/portfolio/electricien-site.jpg"
+              alt="Démo site Électricien"
+              fill
+              className="object-cover"
+            />
+          </div>
           <h3 className="mt-4 font-semibold">Électricien — Laval</h3>
-          <span className="mt-3 inline-block rounded-xl border px-4 py-2 text-sm">Voir la démo</span>
         </a>
 
-        <a href="/demos/coiffeur" className="rounded-2xl border p-6 text-left hover:shadow">
-          <div className="aspect-video rounded-xl bg-gradient-to-br from-rose-100 to-pink-200 grid place-items-center text-6xl">💇‍♀️</div>
-          <h3 className="mt-4 font-semibold">Coiffeur — Blainville</h3>
-          <span className="mt-3 inline-block rounded-xl border px-4 py-2 text-sm">Voir la démo</span>
+        <a href="/demos/coiffeur" className="rounded-2xl border p-6 hover:shadow transition">
+          <div className="relative aspect-video overflow-hidden rounded-xl">
+            <Image
+              src="/portfolio/coiffeur-site.jpg"
+              alt="Démo site Coiffeuse"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <h3 className="mt-4 font-semibold">Coiffeuse — Blainville</h3>
         </a>
 
-        <a href="/demos/restaurant" className="rounded-2xl border p-6 text-left hover:shadow">
-          <div className="aspect-video rounded-xl bg-gradient-to-br from-amber-100 to-yellow-200 grid place-items-center text-6xl">🍽️</div>
+        <a href="/demos/restaurant" className="rounded-2xl border p-6 hover:shadow transition">
+          <div className="relative aspect-video overflow-hidden rounded-xl">
+            <Image
+              src="/portfolio/restaurant-site.jpg"
+              alt="Démo site Restaurant"
+              fill
+              className="object-cover"
+            />
+          </div>
           <h3 className="mt-4 font-semibold">Restaurant — Montréal</h3>
-          <span className="mt-3 inline-block rounded-xl border px-4 py-2 text-sm">Voir la démo</span>
         </a>
       </div>
     </section>
