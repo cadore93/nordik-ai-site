@@ -266,16 +266,30 @@ const faqs = [
 
 
       {/* CONTACT */}
-      <section id="contact" className="container py-12">
-  <h2 className="text-3xl font-bold mb-4">Contactez-nous</h2>
-  <iframe
-    src="https://forms.zohopublic.com/TON-LIEN"
-    width="100%"
-    height="700"
-    frameBorder="0"
-    allowFullScreen
-  ></iframe>
+ {/* CONTACT */}
+<section id="contact" className="container py-12">
+  <h2 className="text-2xl md:text-3xl font-bold">Parlons de votre projet</h2>
+  <p className="text-slate-600 mt-2">Remplis le formulaire — réponse sous 24h.</p>
+
+  {/* 👇 Intégration Zoho Forms via iframe (remplace l'URL par la tienne) */}
+  <div className="mt-6 rounded-2xl border overflow-hidden">
+    <iframe
+      src="https://forms.zohocloud.ca/contactnord1/form/ContactNordikAI"
+      width="100%"
+      height="720"
+      frameBorder="0"
+      allowFullScreen
+      title="Formulaire de contact Nordik AI"
+    ></iframe>
+  </div>
+
+  {/* Coordonnées (facultatif) */}
+  <div className="mt-6 space-y-2 text-slate-600 text-sm">
+    <div>📧 <a className="underline" href="mailto:contact@nordikai.ca">contact@nordikai.ca</a></div>
+    <div>📍 Montréal, QC</div>
+  </div>
 </section>
+
 
 
       {/* FOOTER */}
