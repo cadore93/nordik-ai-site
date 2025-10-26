@@ -274,7 +274,7 @@ const faqs = [
   {/* 👇 Intégration Zoho Forms via iframe (remplace l'URL par la tienne) */}
   <div className="mt-6 rounded-2xl border overflow-hidden">
     <iframe
-      src="https://forms.zohocloud.ca/contactnord1/form/ContactNordikAI"
+      src="https://forms.zohopublic.ca/contactnord1/form/ContactNordikAI/formperma/-1Nxb-Lc51zEX3sE9LptI-oFaXuGlTbYQXwQ8c85XZQ"
       width="100%"
       height="720"
       frameBorder="0"
