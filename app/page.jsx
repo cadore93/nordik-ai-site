@@ -267,36 +267,16 @@ const faqs = [
 
       {/* CONTACT */}
       <section id="contact" className="container py-12">
-        <div className="grid md:grid-cols-2 gap-6 items-center">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold">Parlons de votre projet</h2>
-            <p className="text-slate-600 mt-2">Remplis le formulaire — réponse sous 24h.</p>
-            <div className="mt-6 space-y-3 text-slate-600">
-              <div className="flex items-center gap-2"><Phone className="h-4 w-4"/> (514) 555‑9021</div>
-              <div className="flex items-center gap-2"><Mail className="h-4 w-4"/> contact@nordikai.com</div>
-              <div className="flex items-center gap-2"><MapPin className="h-4 w-4"/> Montréal, QC</div>
-            </div>
-          </div>
-          {/* Formspree example endpoint - replace with your own */}
-          <form className="card p-6 space-y-4" action="https://formspree.io/f/meorvqbz" method="POST">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div className="flex flex-col gap-1">
-                <label className="text-sm">Nom</label>
-                <input name="name" placeholder="Ton nom" required className="border rounded-xl px-3 py-2" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label className="text-sm">Courriel</label>
-                <input type="email" name="email" placeholder="ton@email.com" required className="border rounded-xl px-3 py-2" />
-              </div>
-            </div>
-            <div className="flex flex-col gap-1">
-              <label className="text-sm">Message</label>
-              <textarea name="message" placeholder="Parle‑moi de ton besoin…" rows={4} required className="border rounded-xl px-3 py-2" />
-            </div>
-            <button type="submit" className="btn btn-primary w-full">Envoyer</button>
-          </form>
-        </div>
-      </section>
+  <h2 className="text-3xl font-bold mb-4">Contactez-nous</h2>
+  <iframe
+    src="https://forms.zohopublic.com/TON-LIEN"
+    width="100%"
+    height="700"
+    frameBorder="0"
+    allowFullScreen
+  ></iframe>
+</section>
+
 
       {/* FOOTER */}
       <footer className="border-t border-slate-200 py-8">
