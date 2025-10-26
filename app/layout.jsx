@@ -25,6 +25,26 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
+      import Script from "next/script";
+
+// ...
+<Script id="ld-localbusiness" type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Nordik AI",
+  url: "https://nordikai.ca",
+  email: "contact@nordikai.ca",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Montréal",
+    addressRegion: "QC",
+    addressCountry: "CA"
+  },
+  sameAs: []
+})}
+</Script>
+
       <body>{children}</body>
     </html>
   );
