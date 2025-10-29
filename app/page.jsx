@@ -199,7 +199,7 @@ const faqs = [
     <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
       <h3 className="text-xl font-semibold">Sur-mesure</h3>
       <p className="mt-2 text-4xl font-bold">
-        $599+<span className="text-lg font-normal"> CAD</span>
+        $Sur mesure<span className="text-lg font-normal"> CAD</span>
       </p>
       <ul className="mt-4 space-y-2 text-sm text-neutral-600">
         <li>• Identité visuelle (palette, typo)</li>
