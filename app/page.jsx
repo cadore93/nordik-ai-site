@@ -11,11 +11,7 @@ export default function Page() {
     { icon: <Rocket className="h-5 w-5" />, title: "Site ultra‑rapide", text: "Temps de chargement optimisé = meilleur taux de conversion." },
     { icon: <Sparkles className="h-5 w-5" />, title: "Automations", text: "Avis, posts, e‑mails : gagnez des heures chaque semaine." },
   ];
-  const services = [
-    { title: "Site vitrine AI‑optimisé", text: "1 page claire qui convertit (sections & CTA — boutons d’action — pensés pour la vente).", price: "À partir de 399$" },
-    { title: "SEO local & Google Business Profile", text: "Optimisation fiche, mots‑clés locaux, photos, posts & suivi mensuel.", price: "Forfaits dès 249$/mois" },
-    { title: "Automations IA", text: "Flux pour générer des avis, publier des posts, répondre aux leads et e‑mails.", price: "Sur devis" },
-  ];
+  
   const testimonials = [
     { name: "Alex P.", text: "Site livré en 72h, +38% d’appels depuis Google.", stars: 5 },
     { name: "Mélissa R.", text: "On est passés du bas de page à top 3 sur nos mots‑clés locaux.", stars: 5 },
@@ -126,20 +122,6 @@ const faqs = [
         ))}
       </section>
 
-      {/* SERVICES */}
-      <section id="services" className="container py-10">
-        <h2 className="text-2xl md:text-3xl font-bold">Services</h2>
-        <div className="grid md:grid-cols-3 gap-4 mt-6">
-          {services.map((s, i) => (
-            <div key={i} className="card p-5">
-              <h3 className="font-semibold text-lg">{s.title}</h3>
-              <p className="text-slate-600 mt-2">{s.text}</p>
-              <div className="mt-4 flex items-center gap-2 text-sm"><Check className="h-4 w-4" /> {s.price}</div>
-              <div className="mt-4"><a className="btn btn-primary w-full text-center" href="#contact">Demander un devis</a></div>
-            </div>
-          ))}
-        </div>
-      </section>
 
      {/* TARIFS */}
 <section id="tarifs" className="container mx-auto px-6 py-20 text-center">
