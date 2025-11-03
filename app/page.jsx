@@ -18,8 +18,8 @@ export default function Page() {
     { name: "Gabriel B.", text: "Super service à la clientèle et toujours livré dans les temps.", stars: 5 },
   ];
   const plans = [
-    { name: "Starter", price: "149$", items: ["Site vitrine 1 page", "Intégration Google Maps/Contact", "Livraison 72h"]},
-    { name: "Pro", price: "299$", items: ["3 pages (Accueil, Services, À propos)", "SEO local + Google Business Profile", "Intégration prise de RDV"]},
+    { name: "Starter", price: "299$", items: ["Site vitrine 1 page", "Intégration Google Maps/Contact", "Livraison 72h"]},
+    { name: "Pro", price: "599$", items: ["3 pages (Accueil, Services, À propos)", "SEO local + Google Business Profile", "Intégration prise de RDV"]},
     { name: "Sur-mesure", price: "599+", items: [
   "Charte (logo, couleurs, typos) & copywriting (textes de vente)", "Automations IA (avis, posts)", "Suivi 30 jours"]},
 
