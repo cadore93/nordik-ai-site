@@ -136,7 +136,7 @@ const faqs = [
     <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
       <h3 className="text-xl font-semibold">Starter</h3>
       <p className="mt-2 text-4xl font-bold">
-        $149<span className="text-lg font-normal"> CAD</span>
+        $299<span className="text-lg font-normal"> CAD</span>
       </p>
       <ul className="mt-4 space-y-2 text-sm text-neutral-600">
         <li>• Landing page 1 page rapide</li>
@@ -161,7 +161,7 @@ const faqs = [
       </div>
       <h3 className="text-xl font-semibold">Pro</h3>
       <p className="mt-2 text-4xl font-bold">
-        $299<span className="text-lg font-normal"> CAD</span>
+        $599<span className="text-lg font-normal"> CAD</span>
       </p>
       <ul className="mt-4 space-y-2 text-sm text-neutral-600">
         <li>• Site 3 pages (Accueil / Services / Contact)</li>
