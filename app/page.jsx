@@ -1,98 +1,153 @@
-
 "use client";
-import { Phone, Mail, MapPin, Star, Zap, Rocket, Sparkles, Check } from "lucide-react";
+
+import { motion } from "framer-motion";
+import { Zap, Rocket, Sparkles, ShieldCheck, Clock3, Lock } from "lucide-react";
 import NextImage from "next/image";
 import Portfolio from "./components/Portfolio.jsx";
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
+const cardClass =
+  "rounded-3xl border border-neutral-200/80 bg-white/80 shadow-[0_18px_45px_rgba(15,23,42,0.06)] backdrop-blur-sm p-6 transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_25px_60px_rgba(15,23,42,0.12)]";
 
 export default function Page() {
   const features = [
     { icon: <Zap className="h-5 w-5" />, title: "SEO local AI", text: "Contenu & balises générés intelligemment pour apparaître sur Google Maps." },
-    { icon: <Rocket className="h-5 w-5" />, title: "Site ultra‑rapide", text: "Temps de chargement optimisé = meilleur taux de conversion." },
-    { icon: <Sparkles className="h-5 w-5" />, title: "Automations", text: "Avis, posts, e‑mails : gagnez des heures chaque semaine." },
+    { icon: <Rocket className="h-5 w-5" />, title: "Site ultra-rapide", text: "Temps de chargement optimisé = meilleur taux de conversion." },
+    { icon: <Sparkles className="h-5 w-5" />, title: "Automations", text: "Avis, posts, e-mails : gagnez des heures chaque semaine." },
   ];
-  
+
   const testimonials = [
     { name: "Alex P.", text: "Site livré en 72h, +38% d’appels depuis Google.", stars: 5 },
-    { name: "Mélissa R.", text: "On est passés du bas de page à top 3 sur nos mots‑clés locaux.", stars: 5 },
+    { name: "Mélissa R.", text: "On est passés du bas de page à top 3 sur nos mots-clés locaux.", stars: 5 },
     { name: "Gabriel B.", text: "Super service à la clientèle et toujours livré dans les temps.", stars: 5 },
   ];
-  const plans = [
-    { name: "Starter", price: "299$", items: ["Site vitrine 1 page", "Intégration Google Maps/Contact", "Livraison 72h"]},
-    { name: "Pro", price: "599$", items: ["3 pages (Accueil, Services, À propos)", "SEO local + Google Business Profile", "Intégration prise de RDV"]},
-    { name: "Sur-mesure", price: "599+", items: [
-  "Charte (logo, couleurs, typos) & copywriting (textes de vente)", "Automations IA (avis, posts)", "Suivi 30 jours"]},
 
+  const faqs = [
+    { q: "Combien de temps pour livrer un site ?", a: "Généralement 3–5 jours ouvrables pour une page vitrine complète (texte + design)." },
+    { q: "Quand verrai-je des résultats SEO ?", a: "Les signaux locaux (clics, appels) peuvent bouger en 2–4 semaines ; le positionnement s’améliore en 1–3 mois." },
+    { q: "Proposez-vous la maintenance ?", a: "Oui : mises à jour, posts Google, suivi des mots-clés et rapports mensuels." },
+    { q: "Qu’est-ce que le SEO ?", a: "Optimisation pour remonter sur Google et Google Maps et attirer plus d’appels." },
+    { q: "C’est quoi un test A/B ?", a: "On teste deux versions d’un élément pour garder celle qui convertit le mieux." },
+    { q: "Qu’est-ce qu’un CTA ?", a: "Call To Action : bouton ou lien qui pousse à l’action (appel, devis)." }
   ];
 
-const faqs = [
-  {
-    q: "Combien de temps pour livrer un site ?",
-    a: "Généralement 3–5 jours ouvrables pour une page vitrine complète (texte + design)."
-  },
-  {
-    q: "Quand verrai-je des résultats SEO ?",
-    a: "Les signaux locaux (clics, appels) peuvent bouger en 2–4 semaines ; le positionnement s’améliore sur 1–3 mois selon la concurrence."
-  },
-  {
-    q: "Proposez-vous la maintenance ?",
-    a: "Oui : mises à jour, posts Google, suivi des mots-clés et rapports mensuels selon le forfait choisi."
-  },
-  {
-    q: "Qu’est-ce que le SEO (référencement) ?",
-    a: "Le SEO, c’est l’optimisation de votre site et de votre fiche Google pour apparaître plus haut dans les résultats (et sur Google Maps) afin de générer plus d’appels et de demandes de devis."
-  },
-  {
-    q: "C’est quoi un test A/B ?",
-    a: "On compare 2 versions d’un élément (titre, bouton, section) sur de vrais visiteurs pour voir laquelle convertit le mieux ; on garde la version gagnante."
-  },
-  {
-    q: "Qu’est-ce qu’un CTA ?",
-    a: "CTA = “Call To Action” : un bouton ou lien d’action (ex. “Obtenir un devis”, “Appeler”). Bien placé et bien rédigé, il augmente les conversions."
-  }
-];
-
-
-
-
   return (
-    <div className="min-h-screen">
+  <div className="min-h-screen bg-gradient-to-b from-neutral-50 via-white to-neutral-50">
+
+
       {/* NAVBAR */}
-      <header className="sticky top-0 z-30 bg-white/70 backdrop-blur border-b border-slate-200">
+      <motion.header
+        className="sticky top-0 z-30 bg-white/70 backdrop-blur border-b border-slate-200"
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="container py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="h-8 w-8 rounded-xl bg-slate-900 text-white grid place-items-center font-bold">N</span>
             <span className="font-semibold tracking-tight">Nordik AI</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#services" className="hover:text-slate-900">Services</a>
             <a href="#tarifs" className="hover:text-slate-900">Tarifs</a>
+            <a href="#portfolio" className="hover:text-slate-900">Portfolio</a>
             <a href="#faq" className="hover:text-slate-900">FAQ</a>
           </nav>
           <a href="#contact" className="hidden md:block btn btn-primary">Obtenir un devis</a>
         </div>
-      </header>
+      </motion.header>
+
+      {/* HERO */}
+<motion.section
+  className="container mx-auto max-w-5xl px-6 pt-10 pb-4"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, ease: "easeOut" }}
+>
+  <div className="relative aspect-video w-full rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(15,23,42,0.35)]">
+
+    {/* IMAGE */}
+    <NextImage
+      src="/hero.png"
+      alt="Hero Nordik AI"
+      fill
+      className="object-cover"
+      priority
+    />
+
+    {/* OVERLAY GRADIENT PREMIUM */}
+    <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent" />
+
+    {/* CONTENU TEXTE */}
+    <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        className="text-xs md:text-sm tracking-[0.2em] uppercase text-neutral-300 mb-2"
+      >
+        Nordik AI • SEO local & sites web
+      </motion.p>
+
+      <motion.h1
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 0.15 }}
+        className="
+          text-white 
+          text-xl md:text-3xl lg:text-4xl 
+          font-semibold 
+          leading-tight 
+          whitespace-normal md:whitespace-nowrap
+        "
+      >
+        Plus visible. Plus crédible. Plus rentable.
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 0.25 }}
+        className="mt-3 text-xs md:text-sm text-neutral-200 max-w-xl"
+      >
+        On conçoit des sites rapides et optimisés localement pour transformer les recherches Google en vrais appels.
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 0.35 }}
+        className="mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+      >
+        <a
+          href="#contact"
+          className="inline-flex items-center justify-center rounded-xl bg-white text-neutral-900 px-5 py-2.5 text-sm font-semibold shadow-lg shadow-black/30 hover:-translate-y-0.5 hover:shadow-[0_20px_45px_rgba(56,189,248,0.45)] transition"
+        >
+          Demander un audit gratuit
+        </a>
+        <span className="text-[11px] md:text-xs text-neutral-200">
+          Audit SEO local 10 min • 3 actions concrètes
+        </span>
+      </motion.div>
+    </div>
+  </div>
+</motion.section>
 
 
-
-{/* HERO */}
-<div className="aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
-  <NextImage
-    src="/hero.png"
-    alt="Aperçu site Nordik AI sur laptop et mobile — sites web AI-optimisés"
-    width={1600}
-    height={900}
-    priority
-    className="w-full h-full object-cover"
-    sizes="(max-width: 768px) 100vw, 50vw"
-  />
-</div>
-
-{/* PROMESSE PRINCIPALE */}
-<section className="container mx-auto max-w-4xl px-6 py-12 text-center">
-  <h1 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+{/* PROMESSE PRINCIPALE SOUS LE HERO */}
+<motion.section
+  className="container mx-auto max-w-4xl px-6 py-12 text-center"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+>
+  <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
     + d’appels en 30 jours grâce à un site rapide et optimisé localement.
-  </h1>
+  </h2>
   <p className="mt-4 text-lg text-neutral-600 md:text-xl">
     Nordikai aide les entreprises locales à se démarquer sur Google Maps et attirer plus d’appels.
   </p>
@@ -105,26 +160,182 @@ const faqs = [
     </a>
   </div>
   <div className="mt-2 text-sm text-neutral-500">
-  Audit SEO local gratuit (10 min) + 3 actions concrètes.
-</div>
+    Audit SEO local gratuit (10 min) + 3 actions concrètes.
+  </div>
+    {/* Badges de confiance */}
+  <div className="mt-4 flex flex-col items-center gap-2 text-xs text-neutral-500 md:flex-row md:justify-center md:gap-6">
+    <div className="flex items-center gap-2">
+      <ShieldCheck className="h-4 w-4" />
+      <span>Pas d’engagement long terme</span>
+    </div>
+    <div className="flex items-center gap-2">
+      <Clock3 className="h-4 w-4" />
+      <span>Réponse sous 24h</span>
+    </div>
+    <div className="flex items-center gap-2">
+      <Lock className="h-4 w-4" />
+      <span>Données et accès 100% sécurisés</span>
+    </div>
+  </div>
 
-</section>
+</motion.section>
 
 
       {/* FEATURES */}
-      <section className="container pb-8 grid md:grid-cols-3 gap-4">
+      <motion.section
+        id="services"
+        className="container pb-10 grid md:grid-cols-3 gap-4"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
         {features.map((f, i) => (
-          <div key={i} className="card p-5">
+          <motion.div
+            key={i}
+            className={cardClass}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.4, delay: i * 0.1 }}
+          >
             <div className="h-10 w-10 rounded-xl bg-slate-100 grid place-items-center">{f.icon}</div>
             <h3 className="mt-2 text-lg font-semibold">{f.title}</h3>
             <p className="text-slate-600 mt-1">{f.text}</p>
-          </div>
+          </motion.div>
         ))}
-      </section>
+      </motion.section>
+
+{/* POURQUOI NOUS FAIRE CONFIANCE */}
+<motion.section
+  className="container mx-auto px-6 pb-16"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.6 }}
+>
+  <h2 className="text-2xl md:text-3xl font-bold text-center">
+    Pourquoi nous faire confiance ?
+  </h2>
+
+  <div className="mt-8 grid gap-6 md:grid-cols-3">
+    {/* Point 1 */}
+    <div className="rounded-2xl border border-neutral-200 bg-white/90 p-6 shadow-sm">
+      <div className="flex items-center gap-2">
+        <ShieldCheck className="h-5 w-5 text-neutral-900" />
+        <h3 className="text-base font-semibold">Focalisés sur les résultats</h3>
+      </div>
+      <p className="mt-3 text-sm text-neutral-600">
+        On ne vend pas juste un “beau site”. On se concentre sur ce qui compte
+        vraiment pour vous : les appels, les demandes de devis et les clients réels.
+      </p>
+    </div>
+
+    {/* Point 2 */}
+    <div className="rounded-2xl border border-neutral-200 bg-white/90 p-6 shadow-sm">
+      <div className="flex items-center gap-2">
+        <Clock3 className="h-5 w-5 text-neutral-900" />
+        <h3 className="text-base font-semibold">Processus simple et rapide</h3>
+      </div>
+      <p className="mt-3 text-sm text-neutral-600">
+        Vous êtes déjà occupé avec votre business. On s’occupe de la technique,
+        vous validez les étapes et on avance sans perte de temps.
+      </p>
+    </div>
+
+    {/* Point 3 */}
+    <div className="rounded-2xl border border-neutral-200 bg-white/90 p-6 shadow-sm">
+      <div className="flex items-center gap-2">
+        <Lock className="h-5 w-5 text-neutral-900" />
+        <h3 className="text-base font-semibold">Transparence & propriété totale</h3>
+      </div>
+      <p className="mt-3 text-sm text-neutral-600">
+        Le site, les accès, les comptes Google : tout est à votre nom.
+        Pas de dépendance cachée, pas de mauvaises surprises, tout est clair dès le départ.
+      </p>
+    </div>
+  </div>
+</motion.section>
+
+      {/* PROCESSUS */}
+<motion.section
+  className="relative container mx-auto px-6 py-16 
+             before:content-[''] before:absolute before:inset-y-4 
+             before:left-1/2 before:w-px before:bg-neutral-200/40 
+             before:pointer-events-none"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.6 }}
+>
+  <h2 className="text-2xl md:text-3xl font-bold text-center">
+    Comment ça fonctionne ?
+  </h2>
+  <p className="mt-3 text-neutral-600 text-center max-w-2xl mx-auto text-sm md:text-base">
+    Un processus simple, clair et orienté résultats. Vous savez toujours
+    où on en est et ce qui se passe pour votre business.
+  </p>
+
+  <div className="mt-10 grid gap-6 md:grid-cols-3">
+    {/* Étape 1 */}
+    <div className="rounded-2xl border border-neutral-200 bg-white/90 p-6 shadow-sm">
+      <div className="flex items-center gap-3">
+        <span className="h-8 w-8 rounded-full bg-neutral-900 text-white grid place-items-center text-sm font-semibold">
+          1
+        </span>
+        <h3 className="text-base font-semibold">Audit & appel découverte</h3>
+      </div>
+      <p className="mt-3 text-sm text-neutral-600">
+        On analyse votre site actuel et votre fiche Google. On identifie les
+        opportunités rapides pour générer plus d’appels et de demandes de devis.
+      </p>
+    </div>
+
+    {/* Étape 2 */}
+    <div className="rounded-2xl border border-neutral-200 bg-white/90 p-6 shadow-sm">
+      <div className="flex items-center gap-3">
+        <span className="h-8 w-8 rounded-full bg-neutral-900 text-white grid place-items-center text-sm font-semibold">
+          2
+        </span>
+        <h3 className="text-base font-semibold">Création & optimisation</h3>
+      </div>
+      <p className="mt-3 text-sm text-neutral-600">
+        On conçoit votre site rapide, on optimise le SEO local et votre Google
+        Business Profile. Tout est configuré pour transformer les visites en appels.
+      </p>
+    </div>
+
+    {/* Étape 3 */}
+    <div className="rounded-2xl border border-neutral-200 bg-white/90 p-6 shadow-sm">
+      <div className="flex items-center gap-3">
+        <span className="h-8 w-8 rounded-full bg-neutral-900 text-white grid place-items-center text-sm font-semibold">
+          3
+        </span>
+        <h3 className="text-base font-semibold">Mise en ligne & suivi</h3>
+      </div>
+      <p className="mt-3 text-sm text-neutral-600">
+        On met le site en ligne, on suit les performances et on ajuste si
+        nécessaire. Vous recevez des rapports simples et compréhensibles.
+      </p>
+    </div>
+  </div>
+</motion.section>
 
 
-     {/* TARIFS */}
-<section id="tarifs" className="container mx-auto px-6 py-20 text-center">
+
+      {/* TARIFS */}
+<motion.section
+  id="tarifs"
+  className="container mx-auto px-6 py-20 text-center"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.6 }}
+>
   <h2 className="text-3xl font-semibold md:text-4xl">Nos forfaits</h2>
 
   <p className="mt-3 inline-block rounded-full border border-amber-300 bg-amber-50 px-4 py-1 text-sm text-amber-700">
@@ -132,158 +343,231 @@ const faqs = [
   </p>
 
   <div className="mt-8 grid gap-6 md:grid-cols-3">
-    {/* Starter */}
-    <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
+
+    {/* Starter (gauche) */}
+    <motion.div
+      className={`${cardClass} flex flex-col items-stretch`}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0 }}
+    >
       <h3 className="text-xl font-semibold">Starter</h3>
-      <p className="mt-2 text-4xl font-bold">
-        $299<span className="text-lg font-normal"> CAD</span>
-      </p>
-      <ul className="mt-4 space-y-2 text-sm text-neutral-600">
+      <p className="mt-2 text-4xl font-bold">$599</p>
+
+      <ul className="mt-4 space-y-2 text-sm text-neutral-600 flex-1 text-left">
         <li>• Landing page 1 page rapide</li>
         <li>• Optimisation Google Business Profile</li>
         <li>• Base SEO local + formulaire + analytics</li>
         <li>• Livraison : 3 à 5 jours</li>
       </ul>
+
       <a
         href="#contact"
-        className="mt-6 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white"
+        className="
+          mt-6 inline-flex w-full items-center justify-center
+          rounded-xl border border-white/10
+          bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600
+          px-5 py-3 text-sm font-semibold text-white
+          shadow-lg shadow-slate-900/30
+          transition
+          hover:-translate-y-0.5
+          hover:shadow-xl hover:shadow-sky-500/40
+        "
       >
-        Demander un audit gratuit
+        Nous contacter
       </a>
-    </div>
+    </motion.div>
 
-    {/* Pro */}
-    <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
-      <div className="relative">
-        <span className="absolute right-0 -top-2 rounded-full bg-neutral-900 px-2 py-1 text-xs font-medium text-white">
-          Populaire 💡
-        </span>
+    {/* Pro (centre) */}
+    <motion.div
+      className={`${cardClass} flex flex-col items-stretch relative`}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.15 }}
+    >
+      <div className="absolute right-4 -top-3 rounded-full bg-neutral-900 px-2 py-1 text-xs font-medium text-white">
+        Populaire 💡
       </div>
-      <h3 className="text-xl font-semibold">Pro</h3>
-      <p className="mt-2 text-4xl font-bold">
-        $599<span className="text-lg font-normal"> CAD</span>
-      </p>
-      <ul className="mt-4 space-y-2 text-sm text-neutral-600">
+
+      <h3 className="mt-3 text-xl font-semibold">Pro</h3>
+      <p className="mt-2 text-4xl font-bold">$999</p>
+
+      <ul className="mt-4 space-y-2 text-sm text-neutral-600 flex-1 text-left">
         <li>• Site 3 pages (Accueil / Services / Contact)</li>
         <li>• SEO local complet</li>
         <li>• 3 posts Google Business + tracking conversions</li>
         <li>• Livraison : 7 à 10 jours</li>
       </ul>
+
       <a
         href="#contact"
-        className="mt-6 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white"
+        className="
+          mt-6 inline-flex w-full items-center justify-center
+          rounded-xl border border-white/10
+          bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600
+          px-5 py-3 text-sm font-semibold text-white
+          shadow-lg shadow-slate-900/30
+          transition
+          hover:-translate-y-0.5
+          hover:shadow-xl hover:shadow-sky-500/40
+        "
       >
-        Demander un audit gratuit
+        Nous contacter
       </a>
-    </div>
+    </motion.div>
 
-    {/* Sur-mesure */}
-    <div className="rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition">
+    {/* Sur-mesure (droite) */}
+    <motion.div
+      className={`${cardClass} flex flex-col items-stretch`}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+    >
       <h3 className="text-xl font-semibold">Sur-mesure</h3>
-      <p className="mt-2 text-4xl font-bold">
-        $Sur mesure<span className="text-lg font-normal"> CAD</span>
-      </p>
-      <ul className="mt-4 space-y-2 text-sm text-neutral-600">
+      <p className="mt-2 text-4xl font-bold">SUR&nbsp;MESURE</p>
+
+      <ul className="mt-4 space-y-2 text-sm text-neutral-600 flex-1 text-left">
         <li>• Identité visuelle (palette, typo)</li>
         <li>• Textes optimisés + blog</li>
         <li>• Automatisations IA (formulaire → email)</li>
         <li>• Livraison : selon projet</li>
       </ul>
+
       <a
         href="#contact"
-        className="mt-6 inline-block w-full rounded-xl border border-neutral-900 px-5 py-3 text-sm font-medium transition hover:bg-neutral-900 hover:text-white"
+        className="
+          mt-6 inline-flex w-full items-center justify-center
+          rounded-xl border border-white/10
+          bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600
+          px-5 py-3 text-sm font-semibold text-white
+          shadow-lg shadow-slate-900/30
+          transition
+          hover:-translate-y-0.5
+          hover:shadow-xl hover:shadow-sky-500/40
+        "
       >
-        Demander un audit gratuit
+        Nous contacter
       </a>
-    </div>
+    </motion.div>
   </div>
 
   <p className="mt-6 text-xs text-neutral-500">
     Prix de lancement limités. Taxes en sus. Offre valable pour 3 entreprises locales.
   </p>
+</motion.section>
+
+
+
+      {/* PORTFOLIO */}
+      <section id="portfolio">
+  <Portfolio />
 </section>
 
 
-  
-<Portfolio />
-  
+      {/* AVIS */}
+      <motion.section
+        id="avis"
+        className="container mx-auto px-6 py-16"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl md:text-3xl font-bold">Avis clients</h2>
 
- {/* AVIS */}
-<section id="avis" className="container mx-auto px-6 py-16">
-  <h2 className="text-2xl md:text-3xl font-bold">Avis clients</h2>
-
-  <div className="mt-8 grid gap-6 md:grid-cols-3">
-    {testimonials.map((t, i) => (
-      <div key={i} className="rounded-xl border border-neutral-200 p-5">
-        <div className="flex items-center gap-2 mb-2">
-          {Array.from({ length: t.stars }).map((_, s) => (
-            <svg key={s} className="h-4 w-4 fill-current text-yellow-500" viewBox="0 0 20 20">
-              <path d="M10 15l-5.878 3.09L5.82 12.18.94 7.91l6.09-.89L10 1l2.97 6.02 6.09.89-4.88 4.27 1.7 5.91z" />
-            </svg>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {testimonials.map((t, i) => (
+            <motion.div
+              key={i}
+              className="rounded-xl border border-neutral-200 p-5 bg-white/80 shadow-sm hover:shadow-md transition-transform duration-300 hover:-translate-y-1"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+            >
+              <div className="flex items-center gap-2 mb-2">
+                {Array.from({ length: t.stars }).map((_, s) => (
+                  <svg key={s} className="h-4 w-4 fill-current text-yellow-500" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09L5.82 12.18.94 7.91l6.09-.89L10 1l2.97 6.02 6.09.89-4.88 4.27 1.7 5.91z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-neutral-700">{t.text}</p>
+              <p className="mt-2 text-sm text-neutral-500">— {t.name}</p>
+            </motion.div>
           ))}
         </div>
-        <p className="text-neutral-700">{t.text}</p>
-        <p className="mt-2 text-sm text-neutral-500">— {t.name}</p>
-      </div>
-    ))}
-  </div>
-</section>
+      </motion.section>
 
+      {/* FAQ */}
+      <motion.section
+        id="faq"
+        className="container py-10"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold">FAQ</h2>
 
-  
-{/* FAQ */}
-<section id="faq" className="container py-10">
-  <h2 className="text-2xl md:text-3xl font-bold">FAQ</h2>
-
-  <div className="grid md:grid-cols-3 gap-4 mt-6">
-    {faqs.map((item, i) => (
-      <div key={i} className="card p-6">
-        <h3 className="text-lg font-semibold">{item.q}</h3>
-        <p className="text-slate-600 mt-2">{item.a}</p>
-      </div>
-    ))}
-  </div>
-</section>
-
-
-
+        <div className="grid md:grid-cols-3 gap-4 mt-6">
+          {faqs.map((item, i) => (
+            <motion.div
+              key={i}
+              className="card p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.05 }}
+            >
+              <h3 className="text-lg font-semibold">{item.q}</h3>
+              <p className="text-slate-600 mt-2">{item.a}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+      
+      
       {/* CONTACT */}
- {/* CONTACT */}
-<section id="contact" className="container py-12">
-  <h2 className="text-2xl md:text-3xl font-bold">Parlons de votre projet</h2>
-  <p className="text-slate-600 mt-2">Remplis le formulaire — réponse sous 24h.</p>
+      <motion.section
+        id="contact"
+        className="container py-12"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl md:text-3xl font-bold">Parlons de votre projet</h2>
+        <p className="text-slate-600 mt-2">Remplissez le formulaire — réponse sous 24h.</p>
 
-  {/* 👇 Intégration Zoho Forms via iframe (remplace l'URL par la tienne) */}
-  <div className="mt-6 rounded-2xl border overflow-hidden">
-    <iframe
-      src="https://forms.zohopublic.ca/contactnord1/form/ContactNordikAI/formperma/-1Nxb-Lc51zEX3sE9LptI-oFaXuGlTbYQXwQ8c85XZQ"
-      width="100%"
-      height="720"
-      frameBorder="0"
-      allowFullScreen
-      title="Formulaire de contact Nordik AI"
-    ></iframe>
-  </div>
+        <div className="mt-6 rounded-2xl border overflow-hidden shadow-sm">
+          <iframe
+            src="https://forms.zohopublic.ca/contactnord1/form/ContactNordikAI/formperma/-1Nxb-Lc51zEX3sE9LptI-oFaXuGlTbYQXwQ8c85XZQ"
+            width="100%"
+            height="720"
+            frameBorder="0"
+            allowFullScreen
+            title="Formulaire de contact Nordik AI"
+          ></iframe>
+        </div>
 
-  {/* Coordonnées (facultatif) */}
-  <div className="mt-6 space-y-2 text-slate-600 text-sm">
-    <div>📧 <a className="underline" href="mailto:contact@nordikai.ca">contact@nordikai.ca</a></div>
-    <div>📍 Montréal, QC</div>
-  </div>
-</section>
-
+        <div className="mt-6 space-y-2 text-slate-600 text-sm">
+          <div>📧 <a className="underline" href="mailto:contact@nordikai.ca">contact@nordikai.ca</a></div>
+          <div>📍 Montréal, QC</div>
+        </div>
+      </motion.section>
 
 
       {/* FOOTER */}
-      <footer className="border-t border-slate-200 py-8">
-        <div className="container text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-2">
+      <footer className="border-t border-slate-200 py-8 bg-white">
+        <div className="container text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between">
           <p>© {new Date().getFullYear()} Nordik AI — Tous droits réservés.</p>
-          <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-slate-800">Mentions légales</a>
-            <a href="#" className="hover:text-slate-800">Politique de confidentialité</a>
-          </div>
         </div>
       </footer>
+
     </div>
   );
 }
