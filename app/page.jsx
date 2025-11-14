@@ -59,42 +59,33 @@ export default function Page() {
         </div>
       </motion.header>
 
-      {/* HERO */}
+      {/* HERO FULL SCREEN */}
 <motion.section
-  className="container mx-auto max-w-5xl px-6 pt-10 pb-4"
+  className="relative h-[85vh] md:h-screen w-full"
   initial={{ opacity: 0, y: 30 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.7, ease: "easeOut" }}
 >
-  <div className="relative aspect-video w-full rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(15,23,42,0.35)]">
+  {/* IMAGE DE FOND */}
+  <NextImage
+    src="/hero.png"
+    alt="Hero Nordik AI"
+    fill
+    priority
+    className="object-cover"
+  />
 
-    {/* IMAGE */}
-    <NextImage
-      src="/hero.png"
-      alt="Hero Nordik AI"
-      fill
-      className="object-cover"
-      priority
-    />
+  {/* OVERLAY GRADIENT */}
+  <div className="absolute inset-0 bg-gradient-to-tr from-black/75 via-black/45 to-transparent" />
 
-    {/* OVERLAY GRADIENT PREMIUM */}
-    <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent" />
-
-    {/* CONTENU TEXTE */}
-    <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-      <motion.p
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.1 }}
-        className="text-xs md:text-sm tracking-[0.2em] uppercase text-neutral-300 mb-2"
-      >
+  {/* CONTENU CENTRÉ */}
+  <div className="relative z-10 h-full">
+    <div className="container mx-auto h-full px-6 flex flex-col items-center justify-center text-center">
+      <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-neutral-300 mb-3">
         Nordik AI • SEO local & sites web
-      </motion.p>
+      </p>
 
-      <motion.h1
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.15 }}
+      <h1
         className="
           text-white 
           text-xl md:text-3xl lg:text-4xl 
@@ -104,23 +95,13 @@ export default function Page() {
         "
       >
         Plus visible. Plus crédible. Plus rentable.
-      </motion.h1>
+      </h1>
 
-      <motion.p
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.25 }}
-        className="mt-3 text-xs md:text-sm text-neutral-200 max-w-xl"
-      >
+      <p className="mt-3 text-xs md:text-sm text-neutral-200 max-w-xl">
         On conçoit des sites rapides et optimisés localement pour transformer les recherches Google en vrais appels.
-      </motion.p>
+      </p>
 
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.35 }}
-        className="mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
-      >
+      <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <a
           href="#contact"
           className="inline-flex items-center justify-center rounded-xl bg-white text-neutral-900 px-5 py-2.5 text-sm font-semibold shadow-lg shadow-black/30 hover:-translate-y-0.5 hover:shadow-[0_20px_45px_rgba(56,189,248,0.45)] transition"
@@ -130,10 +111,11 @@ export default function Page() {
         <span className="text-[11px] md:text-xs text-neutral-200">
           Audit SEO local 10 min • 3 actions concrètes
         </span>
-      </motion.div>
+      </div>
     </div>
   </div>
 </motion.section>
+
 
 
 {/* PROMESSE PRINCIPALE SOUS LE HERO */}
