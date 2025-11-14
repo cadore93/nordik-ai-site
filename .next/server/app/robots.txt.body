@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+Host: https://nordikai.ca
+Sitemap: https://nordikai.ca/sitemap.xml
