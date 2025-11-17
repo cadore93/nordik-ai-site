@@ -97,10 +97,6 @@ export default function Page() {
         Plus visible. Plus crédible. Plus rentable.
       </h1>
 
-      <p className="mt-3 text-xs md:text-sm text-neutral-200 max-w-xl">
-        On conçoit des sites rapides et optimisés localement pour transformer les recherches Google en vrais appels.
-      </p>
-
       <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <a
           href="#contact"
@@ -320,10 +316,6 @@ export default function Page() {
 >
   <h2 className="text-3xl font-semibold md:text-4xl">Nos forfaits</h2>
 
-  <p className="mt-3 inline-block rounded-full border border-amber-300 bg-amber-50 px-4 py-1 text-sm text-amber-700">
-    💥 Offre de lancement 50% — 3 premières entreprises locales seulement.
-  </p>
-
   <div className="mt-8 grid gap-6 md:grid-cols-3">
 
     {/* Starter (gauche) */}
@@ -335,13 +327,14 @@ export default function Page() {
       transition={{ duration: 0.5, delay: 0 }}
     >
       <h3 className="text-xl font-semibold">Starter</h3>
-      <p className="mt-2 text-4xl font-bold">$599</p>
+      <p className="mt-2 text-4xl font-bold">$650</p>
 
       <ul className="mt-4 space-y-2 text-sm text-neutral-600 flex-1 text-left">
-        <li>• Landing page 1 page rapide</li>
+        <li>• Landing page 1 page moderne</li>
         <li>• Optimisation Google Business Profile</li>
         <li>• Base SEO local + formulaire + analytics</li>
         <li>• Livraison : 3 à 5 jours</li>
+        <li>• 30 jours de support</li>
       </ul>
 
       <a
@@ -377,10 +370,11 @@ export default function Page() {
       <p className="mt-2 text-4xl font-bold">$999</p>
 
       <ul className="mt-4 space-y-2 text-sm text-neutral-600 flex-1 text-left">
-        <li>• Site 3 pages (Accueil / Services / Contact)</li>
+        <li>• Site 3–5 pages (Accueil / Services / Contact…)</li>
         <li>• SEO local complet</li>
-        <li>• 3 posts Google Business + tracking conversions</li>
+        <li>• Optimisation Google Business Profile</li>
         <li>• Livraison : 7 à 10 jours</li>
+        <li>• 30 jours de support</li>
       </ul>
 
       <a
@@ -400,7 +394,7 @@ export default function Page() {
       </a>
     </motion.div>
 
-    {/* Sur-mesure (droite) */}
+    {/* SEO mensuel (droite) */}
     <motion.div
       className={`${cardClass} flex flex-col items-stretch`}
       initial={{ opacity: 0, y: 40 }}
@@ -408,14 +402,15 @@ export default function Page() {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay: 0.3 }}
     >
-      <h3 className="text-xl font-semibold">Sur-mesure</h3>
-      <p className="mt-2 text-4xl font-bold">SUR&nbsp;MESURE</p>
+      <h3 className="text-xl font-semibold">Domination Locale</h3>
+      <p className="mt-2 text-4xl font-bold">$400/mois</p>
 
       <ul className="mt-4 space-y-2 text-sm text-neutral-600 flex-1 text-left">
-        <li>• Identité visuelle (palette, typo)</li>
-        <li>• Textes optimisés + blog</li>
-        <li>• Automatisations IA (formulaire → email)</li>
-        <li>• Livraison : selon projet</li>
+        <li>• Optimisation continue Google Business Profile</li>
+        <li>• Mises à jour mensuelles du site</li>
+        <li>• Suivi de la visibilité locale & performances</li>
+        <li>• Support & correctifs inclus, résiliation à tout moment</li>
+        <li>• SEO local optimisé a chaeu mois</li>
       </ul>
 
       <a
@@ -437,9 +432,11 @@ export default function Page() {
   </div>
 
   <p className="mt-6 text-xs text-neutral-500">
-    Prix de lancement limités. Taxes en sus. Offre valable pour 3 entreprises locales.
+    Prix de lancement limités. Paiement final à la mise en ligne — zéro risque.
+    Offre valable pour 3 entreprises locales.
   </p>
 </motion.section>
+
 
 
 
