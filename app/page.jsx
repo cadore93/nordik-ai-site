@@ -55,7 +55,7 @@ export default function Page() {
             <a href="#portfolio" className="hover:text-slate-900">Portfolio</a>
             <a href="#faq" className="hover:text-slate-900">FAQ</a>
           </nav>
-          <a href="#contact" className="hidden md:block btn btn-primary">Obtenir un devis</a>
+          <a href="#contact" className="hidden md:block btn btn-primary">Obtenir un audit</a>
         </div>
       </motion.header>
 
