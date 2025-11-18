@@ -304,138 +304,35 @@ export default function Page() {
 
 
 
-      {/* TARIFS */}
+      {/* À PROPOS DE MOI */}
 <motion.section
-  id="tarifs"
-  className="container mx-auto px-6 py-20 text-center"
+  id="a-propos"
+  className="container mx-auto px-6 py-20 text-center max-w-3xl"
   variants={fadeUp}
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true, amount: 0.2 }}
   transition={{ duration: 0.6 }}
 >
-  <h2 className="text-3xl font-semibold md:text-4xl">Nos forfaits</h2>
+  <h2 className="text-3xl font-semibold md:text-4xl">
+    À propos de moi
+  </h2>
 
-  <div className="mt-8 grid gap-6 md:grid-cols-3">
-
-    {/* Starter (gauche) */}
-    <motion.div
-      className={`${cardClass} flex flex-col items-stretch`}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5, delay: 0 }}
-    >
-      <h3 className="text-xl font-semibold">Starter</h3>
-      <p className="mt-2 text-4xl font-bold">$650</p>
-
-      <ul className="mt-4 space-y-2 text-sm text-neutral-600 flex-1 text-left">
-        <li>• Landing page 1 page moderne</li>
-        <li>• Optimisation Google Business Profile</li>
-        <li>• Base SEO local + formulaire + analytics</li>
-        <li>• Livraison : 3 à 5 jours</li>
-        <li>• 30 jours de support</li>
-      </ul>
-
-      <a
-        href="#contact"
-        className="
-          mt-6 inline-flex w-full items-center justify-center
-          rounded-xl border border-white/10
-          bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600
-          px-5 py-3 text-sm font-semibold text-white
-          shadow-lg shadow-slate-900/30
-          transition
-          hover:-translate-y-0.5
-          hover:shadow-xl hover:shadow-sky-500/40
-        "
-      >
-        Nous contacter
-      </a>
-    </motion.div>
-
-    {/* Pro (centre) */}
-    <motion.div
-      className={`${cardClass} flex flex-col items-stretch relative`}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5, delay: 0.15 }}
-    >
-      <div className="absolute right-4 -top-3 rounded-full bg-neutral-900 px-2 py-1 text-xs font-medium text-white">
-        Populaire 💡
-      </div>
-
-      <h3 className="mt-3 text-xl font-semibold">Pro</h3>
-      <p className="mt-2 text-4xl font-bold">$999</p>
-
-      <ul className="mt-4 space-y-2 text-sm text-neutral-600 flex-1 text-left">
-        <li>• Site 3–5 pages (Accueil / Services / Contact…)</li>
-        <li>• SEO local complet</li>
-        <li>• Optimisation Google Business Profile</li>
-        <li>• Livraison : 7 à 10 jours</li>
-        <li>• 30 jours de support</li>
-      </ul>
-
-      <a
-        href="#contact"
-        className="
-          mt-6 inline-flex w-full items-center justify-center
-          rounded-xl border border-white/10
-          bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600
-          px-5 py-3 text-sm font-semibold text-white
-          shadow-lg shadow-slate-900/30
-          transition
-          hover:-translate-y-0.5
-          hover:shadow-xl hover:shadow-sky-500/40
-        "
-      >
-        Nous contacter
-      </a>
-    </motion.div>
-
-    {/* SEO mensuel (droite) */}
-    <motion.div
-      className={`${cardClass} flex flex-col items-stretch`}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5, delay: 0.3 }}
-    >
-      <h3 className="text-xl font-semibold">Domination Locale</h3>
-      <p className="mt-2 text-4xl font-bold">$400/mois</p>
-
-      <ul className="mt-4 space-y-2 text-sm text-neutral-600 flex-1 text-left">
-        <li>• Optimisation continue Google Business Profile</li>
-        <li>• Mises à jour mensuelles du site</li>
-        <li>• Suivi de la visibilité locale & performances</li>
-        <li>• Support & correctifs inclus, résiliation à tout moment</li>
-        <li>• SEO local optimisé a chaeu mois</li>
-      </ul>
-
-      <a
-        href="#contact"
-        className="
-          mt-6 inline-flex w-full items-center justify-center
-          rounded-xl border border-white/10
-          bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600
-          px-5 py-3 text-sm font-semibold text-white
-          shadow-lg shadow-slate-900/30
-          transition
-          hover:-translate-y-0.5
-          hover:shadow-xl hover:shadow-sky-500/40
-        "
-      >
-        Nous contacter
-      </a>
-    </motion.div>
-  </div>
-
-  <p className="mt-6 text-xs text-neutral-500">
-    Prix de lancement limités. Paiement final à la mise en ligne — zéro risque.
-    Offre valable pour 3 entreprises locales.
+  <p className="mt-6 text-neutral-600 text-base md:text-lg leading-relaxed">
+    <strong className="text-neutral-800">Je m'appelle Charles-Antoine Doré.</strong><br />
+    Je termine mon bac en finance à Montréal, mais j'ai toujours voulu bâtir ma propre 
+    entreprise et aider les commerces d'ici à mieux rayonner en ligne. 
+    Je crois profondément à l’importance d’encourager local.
+    <br /><br />
+    Électriciens, coiffeurs, entrepreneurs, petites PME — ce sont eux qui font vivre nos communautés. 
+    Pourtant, leur présence en ligne ne reflète pas toujours la qualité de leur travail.
+    <br /><br />
+    C’est pour ça que j’ai lancé <strong>Nordik AI</strong> : une petite agence locale qui crée 
+    des sites modernes et optimise la visibilité Google pour aider les entreprises d’ici 
+    à recevoir plus d’appels et plus de clients.
   </p>
 </motion.section>
+
 
 
 
